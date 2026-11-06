@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Livraison à domicile</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+<div 
+class="promo">Livraison offerte dès 50 DT d'achat.
+</div>
+
+<header class="nav wrap">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo-link">
+        <img src="assets/logo.svg" alt="Food Delivery" class="logo">
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav-links" aria-label="Navigation principale">
+        <a href="index.html" class="nav-active">Accueil</a>
+
+        <div class="nav-dropdown">
+            <button class="nav-dropdown-btn"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="menu-carte">
+                La carte <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu" id="menu-carte">
+                <a href="carte.html">Tous les plats</a>
+                <a href="carte.html?categorie=pizzas">Pizzas</a>
+                <a href="carte.html?categorie=burgers">Burgers</a>
+                <a href="carte.html?categorie=accompagnements">Accompagnements</a>
+                <a href="carte.html?categorie=desserts">Desserts</a>
+                <a href="carte.html?categorie=boissons">Boissons</a>
+            </div>
+        </div>
+
+        <a href="#savoir-faire">Le savoir-faire</a>
+        <a href="#avis">Vos avis</a>
+    </nav>
+
+    <!-- Actions -->
+    <div class="nav-right">
+        <button class="nav-icon-btn" type="button"
+                aria-label="Rechercher un plat">
+            <i data-lucide="search"></i>
+        </button>
+
+        <span class="nav-separator"></span>
+
+        <a href="panier.html" class="cart-link">
+            <i data-lucide="shopping-cart"></i>
+            <span>Panier <b id="cart-count">(0)</b></span>
+        </a>
+
+        <a class="btn small" href="carte.html">
+            Commander ↗
+        </a>
+    </div>
+</header>
+
+<main id="top">
+    <section class="hero wrap">
+        <div class="hero-copy">
+            <h1>La bonne humeur.<br><em>se commande aussi.</em></h1>
+            <p class="muted intro">Vos classiques préférés, revisités avec gourmandise. Une seule mission : vous régaler à chaque commande.</p>
+            <div class="address">
+                <i data-lucide="map-pin"></i>
+                <span>On vous livre où ?</span>
+                <a class="btn small" href="#carte">Je commande ! &nbsp; ↗</a>
+            </div>
+            <p class="micro">25–35 min chez vous &nbsp;&nbsp; 
+                <span class="red">★★★★★</span> &nbsp; 4,8/5 · 1 200 gourmands</p>
+            </div>
+            <div>
+                <img src="assets/Burger flottant.png" alt="Burger flottant" style="width: 100%; max-width: 600px; height: auto;">
+            </div>
+        </section>
+<section class="catalog wrap" id="carte">
+    <div class="section-head">
+        <h2>Vos envies, nos spécialités.</h2>
+    <a href="#carte">Voir toute la carte ↗</a>
+</div>
+<div class="tabs">
+    <button class="active" data-filter="all">Tous les favoris</button>
+    <button data-filter="pizza">Pizzas</button>
+    <button data-filter="burger">Burgers</button>
+    <button data-filter="side">À côté</button>
+    <button data-filter="dessert">Desserts & boissons</button>
+</div>
+<div class="products">
+    <article class="product" data-type="pizza">
+        <img src="assets/hero-pizza.jpg" alt="Pizza Margherita">
+        <div class="product-body">
+            <h3>Margherita</h3>
+            <p>Tomate, fior di latte, basilic frais. La simplicité qui fait tout.</p>
+            <div><b>19,900 DT</b>
+                <button class="add" aria-label="Ajouter Margherita">+</button>
+            </div>
+        </div>
+    </article>
+    <article class="product" data-type="burger">
+        <img src="assets\Smashamore — Burger.jpg">
+        <div class="product-body">
+            <h3>Smashamore</h3>
+            <p>Double steak smash, cheddar, pickles et notre sauce maison.</p>
+            <div><b>24,900 DT</b>
+                <button class="add" aria-label="Ajouter Smashamore">+</button>
+            </div>
+        </div>
+    </article>
+    <article class="product" data-type="side">
+        <img src="assets\Frites.jpg">
+        <div class="product-body">
+            <h3>Frites</h3>
+            <p>Frites dorées, parmesan râpé et une touche de romarin.</p>
+            <div><b>7,500 DT</b>
+                <button class="add" aria-label="Ajouter Frites">+</button>
+            </div>
+        </div>
+    </article>
+    <article class="product" data-type="dessert">
+        <img src="assets\Tiramisu maison.jpg">
+        <div class="product-body">
+            <h3>Tiramisu maison</h3>
+            <p>Mascarpone léger, café intense et cacao. Le vrai, tout simplement.</p>
+            <div><b>10,900 DT</b>
+                <button class="add" aria-label="Ajouter Tiramisu maison">+</button>
+            </div>
+        </div>
+    </article>
+</div>
+<p class="micro">Prix en dinars tunisiens (DT), TTC · Informations sur les ingrédients et allergènes disponibles sur chaque fiche produit.</p>
+</section>
+<section id="savoir-faire" class="story">
+    <div class="wrap story-intro">
+        <div>
+            <p class="eyebrow">LE VOYAGE DE VOTRE MARGHERITA</p>
+            <h2>Une bonne pizza,<br>ça ne s'improvise pas.</h2>
+        </div>
+        <p>De nos mains à votre porte, découvrez les six étapes d'une histoire qui finit toujours bien.<br><span class="red">↓ &nbsp; SCROLLEZ POUR DÉCOUVRIR</span></p>
+    </div>
+    <div class="scroll-track" id="scroll-track">
+        <div class="sticky-stage">
+            <video id="pizza-video" src="assets/pizza.mp4" preload="auto" playsinline aria-label="Préparation d’une pizza contrôlée par le défilement"></video>
+        </div>
+    </div>
+</section>
+
+<section class="reviews-section" id="avis">
+    <div class="wrap">
+
+        <!-- En-tête des avis -->
+        <div class="reviews-header">
+            <div>
+                <h2>Le bon goût fait parler de lui.</h2>
+            </div>
+        </div>
+
+        <!-- Cartes des avis -->
+        <div class="reviews-grid">
+
+            <article class="review-card">
+                <div class="review-top">
+                    <span class="rating-stars">★★★★★</span>
+                    <span>Il y a 2 jours</span>
+                </div>
+
+                <p class="review-text">
+                    « La pâte est incroyable, les ingrédients
+                    ont du goût et la pizza est arrivée bien
+                    chaude. Notre nouveau rituel du vendredi ! »
+                </p>
+
+                <div class="review-author">
+                    <span class="avatar">I</span>
+                    <div>
+                        <strong>Inès M.</strong>
+                        <small>Cliente</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card">
+                <div class="review-top">
+                    <span class="rating-stars">★★★★★</span>
+                    <span>Il y a 4 jours</span>
+                </div>
+
+                <p class="review-text">
+                    « Enfin un smash burger qui tient ses
+                    promesses. Les frites au parmesan...
+                    on aurait dû en prendre deux portions. »
+                </p>
+
+                <div class="review-author">
+                    <span class="avatar green">A</span>
+                    <div>
+                        <strong>Ahmed T.</strong>
+                        <small>Client</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card">
+                <div class="review-top">
+                    <span class="rating-stars">★★★★★</span>
+                    <span>Il y a 1 semaine</span>
+                </div>
+
+                <p class="review-text">
+                    « Commandé pour une soirée entre amis.
+                    Tout le monde a adoré, jusqu'au tiramisu.
+                    Simple, généreux et vraiment bon. »
+                </p>
+
+                <div class="review-author">
+                    <span class="avatar yellow">S</span>
+                    <div>
+                        <strong>Sarah L.</strong>
+                        <small>Cliente</small>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section class="cta wrap">
+    <div>
+        <h2>Vous mettez la table.<br>On fait le reste.</h2>
+        <p>Votre première livraison est offerte dès 50 DT de commande.
+        </p>
+
+<div class="promo-actions">
+    <a href="carte.html" class="promo-button">
+        Passer ma commande
+        <span>↗</span>
+    </a>
+
+    <span class="promo-hours">
+        Tous les jours · 11 h–23 h
+    </span>
+</div>
+
+<p class="promo-note">
+    Une utilisation par foyer · Hors promotions ·
+    Selon zone de livraison.
+</p>
+    </div>
+    <div>
+        <img src="assets/partage.png" alt="Pizza Margherita" style="width: 100%; max-width: 600px; height: auto;">
+    </div>
+</section>
+</main>
+<footer class="wrap">
+    <div>
+        <!-- Logo -->
+    <a href="index.html" class="logo-link">
+        <img src="assets/logo.svg" alt="Food Delivery" class="logo">
+    </a>
+        <p>Du bon, du chaud, du bonheur.<br>Et toujours un peu d'amore.</p>
+    </div>
+    <div>
+        <b>À la carte</b>
+        <a href="#carte">Toutes nos pizzas</a>
+        <a href="#carte">Burgers & à-côtés</a>
+        <a href="#carte">Desserts & boissons</a>
+    </div>
+    <div>
+        <b>Découvrez-nous</b>
+        <a href="#savoir-faire">Notre savoir-faire</a>
+        <a href="#avis">Nos avis</a>
+    </div>
+    <div>
+        <b>On est là pour vous</b>
+        <span>Tous les jours · 11h–23h</span>
+        <span>food@delivery.com</span>
+    </div>
+</footer>
+<div class="bottom wrap">© © 2026 Food Delivery · Tous droits réservés.<span>Mentions légales &nbsp; Confidentialité &nbsp; CGV</span></div>
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>
